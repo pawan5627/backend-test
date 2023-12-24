@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AttendanceController;
+
+Route::post('/attendance/upload', [AttendanceController::class, 'upload']);
+Route::get('/attendance/{employeeId}', [AttendanceController::class, 'getEmployeeAttendance']);
 
 /*
 |--------------------------------------------------------------------------
